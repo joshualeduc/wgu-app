@@ -1,0 +1,29 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav class="mat-elevation-z10" [opened]="!isScreenSmall"
+  [mode]="isScreenSmall ? 'over' : 'side'">
+    <mat-toolbar color="primary">
+      <img mat-card src="/assets/Star_Wars_Logo.png" class="logo-img">
+    </mat-toolbar>
+    <mat-nav-list>
+      <mat-list-item>
+        <a matLine [routerLink]="['/home']">
+          <mat-icon class="nav-icon">home</mat-icon> Home
+        </a>
+      </mat-list-item>
+      <mat-list-item>
+        <a matLine [routerLink]="['/gigs']">
+          <mat-icon class="nav-icon">work</mat-icon> Gigs
+        </a>
+      </mat-list-item>
+      <mat-list-item>
+        <a matLine [routerLink]="['/starships']">
+          <mat-icon class="nav-icon">rocket</mat-icon> Starships
+        </a>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <wgu-toolbar (toggleSidenav)="sidenav.toggle()"></wgu-toolbar>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

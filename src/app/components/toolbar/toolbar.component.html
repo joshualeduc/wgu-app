@@ -1,0 +1,8 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button class="sidenav-toggle" aria-label="Example icon-button with menu icon" (click)="toggleSidenav.emit()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Copilots"R"Us</span>
+  <span class="example-spacer"></span>
+  <wgu-theme-switcher [options]="options$ | async" (themeChange)="handleThemeChange($event)"></wgu-theme-switcher>
+</mat-toolbar>

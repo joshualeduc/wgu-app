@@ -1,0 +1,29 @@
+.avatar-image {
+  background-size: cover;
+  margin-right: 8px;
+  
+  &.Obi {
+    background-image: url('/assets/pilots/10.png');
+  }
+
+  &.Han {
+    background-image: url('/assets/pilots/14.png');
+  }
+
+  &.Luke {
+    background-image: url('/assets/pilots/1.png');
+  }
+}
+
+.home-content {
+  margin: 10px;
+  font-size: 1.25em;
+
+  .quote-block {
+    margin: 12px 0;
+  }
+}
+
+.summary {
+  font-weight: 700;
+}
