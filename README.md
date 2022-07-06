@@ -1,3 +1,3 @@
 # WguApp
 
-Being over 3 years since I have since I have used typescript and 4 years since I have used angular, I decided to build a demo app with the newest versions of each. I figured that it would minimize the onboarding time I would need, and it would show the amount of work I can do in under half of a sprint.
+It's been over 3 years since I've used typescript and 4 years since I've used angular. I decided to build a demo app with the newest versions of each. This review would minimize the time needed to onboard me, and shows the amount of work I can do in under half of a sprint.
