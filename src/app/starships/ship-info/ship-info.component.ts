@@ -4,6 +4,7 @@ import { Subscription } from 'rxjs';
 import { finalize } from 'rxjs/operators'
 import { IStarship } from 'src/app/shared/starship.model';
 import { StarshipsService } from 'src/app/shared/starships.service';
+import { IShipInfo } from './ship-info.model';
 
 
 @Component({
@@ -14,7 +15,7 @@ import { StarshipsService } from 'src/app/shared/starships.service';
 export class ShipInfoComponent implements OnInit {
 
   starshipSub!: Subscription;
-  shipInfo!: any;
+  shipInfo!: IShipInfo[];
   shipName!: string;
   showLoader!: boolean;
 
