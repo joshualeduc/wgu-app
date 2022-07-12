@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material/core'
+import { MatNativeDateModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
@@ -78,7 +78,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatSortModule,
     MatTableModule,
     FlexLayoutModule,
-  ]
+  ],
 })
-
-export class MaterialModule { }
+export class MaterialModule {}

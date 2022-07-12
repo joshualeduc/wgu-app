@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { Option } from "./option.model";
+import { Option } from './option.model';
 
 // Some functions taken from https://github.com/angular/material.angular.io/blob/master/src/app/shared/style-manager/style-manager.ts
 
@@ -17,8 +17,8 @@ function getExistingLinkElementByKey(key: string) {
 }
 
 function createLinkElementWithKey(key: string) {
-  const linkEl = document.createElement("link");
-  linkEl.setAttribute("rel", "stylesheet");
+  const linkEl = document.createElement('link');
+  linkEl.setAttribute('rel', 'stylesheet');
   linkEl.classList.add(getClassNameForKey(key));
   document.head.appendChild(linkEl);
   return linkEl;
@@ -30,7 +30,7 @@ function getClassNameForKey(key: string) {
 
 // Set the stylesheet with the specified key.
 function setStyle(key: string, href: string) {
-  getLinkElementForKey(key).setAttribute("href", href);
+  getLinkElementForKey(key).setAttribute('href', href);
 }
 
 // Remove the stylesheet with the specified key.
@@ -42,20 +42,16 @@ function removeStyle(key: string) {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ThemeSwitcherService {
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getThemeOptions(): Observable<Option[]> {
-    return this.http.get<Option[]>("assets/themeOptions.json");
+    return this.http.get<Option[]>('assets/themeOptions.json');
   }
 
   setTheme(themeToSet: string) {
-    setStyle(
-      "theme",
-      `assets/themes/${themeToSet}.css`
-    );
+    setStyle('theme', `assets/themes/${themeToSet}.css`);
   }
 }

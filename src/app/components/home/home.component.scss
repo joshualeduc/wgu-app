@@ -1,17 +1,17 @@
 .avatar-image {
   background-size: cover;
   margin-right: 8px;
-  
+
   &.Obi {
-    background-image: url('/assets/pilots/10.png');
+    background-image: url("/assets/pilots/10.png");
   }
 
   &.Han {
-    background-image: url('/assets/pilots/14.png');
+    background-image: url("/assets/pilots/14.png");
   }
 
   &.Luke {
-    background-image: url('/assets/pilots/1.png');
+    background-image: url("/assets/pilots/1.png");
   }
 }
 

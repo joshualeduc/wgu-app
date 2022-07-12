@@ -1,43 +1,64 @@
 <mat-card>
   <mat-card-header>
     <mat-card-title>Gigs</mat-card-title>
-    <mat-card-subtitle>A list of open ships with pilots for hire</mat-card-subtitle>
+    <mat-card-subtitle
+      >A list of open ships with pilots for hire</mat-card-subtitle
+    >
   </mat-card-header>
   <mat-card-content>
     <mat-accordion class="headers-align" multi>
-  
       <mat-expansion-panel *ngFor="let ship of starshipsWithPilots">
         <mat-expansion-panel-header>
           <mat-panel-title>
-            {{ship.name}}
+            {{ ship.name }}
           </mat-panel-title>
-          <mat-panel-description fxLayout="row" fxLayoutAlign="space-between end">
-            <span>{{ship.manufacturer}}</span>
-            <span>₹{{(+ship.cost_in_credits / 500) | number: '1.0':'en-US'}}</span>
+          <mat-panel-description
+            fxLayout="row"
+            fxLayoutAlign="space-between end"
+          >
+            <span>{{ ship.manufacturer }}</span>
+            <span
+              >₹{{ +ship.cost_in_credits / 500 | number: "1.0":"en-US" }}</span
+            >
           </mat-panel-description>
         </mat-expansion-panel-header>
-    
+
         <div fxLayout="row" fxLayoutAlign="start center">
           <div fxFlex="30">
             <mat-form-field appearance="fill">
               <mat-label>Date</mat-label>
-              <input matInput [matDatepicker]="picker" (focus)="picker.open()" readonly>
+              <input
+                matInput
+                [matDatepicker]="picker"
+                (focus)="picker.open()"
+                readonly
+              />
             </mat-form-field>
             <mat-datepicker #picker></mat-datepicker>
           </div>
           <span fxFlex></span>
-          <div class="pilots" fxLayout="row" fxLayoutAlign="end center" fxFlex="30">
+          <div
+            class="pilots"
+            fxLayout="row"
+            fxLayoutAlign="end center"
+            fxFlex="30"
+          >
             <span class="pilot-label">Pilots:</span>
-            <div mat-card-avatar *ngFor="let pilot of ship.pilots" class="avatar-image" [style.background-image]="'url(/assets/pilots/' + pilot + '.png)'"></div>
+            <div
+              mat-card-avatar
+              *ngFor="let pilot of ship.pilots"
+              class="avatar-image"
+              [style.background-image]="'url(/assets/pilots/' + pilot + '.png)'"
+            ></div>
           </div>
         </div>
 
         <mat-action-row>
-          <button mat-raised-button color="primary" (click)="buyLesson()">Buy Lesson</button>
+          <button mat-raised-button color="primary" (click)="buyLesson()">
+            Buy Lesson
+          </button>
         </mat-action-row>
       </mat-expansion-panel>
-
-
     </mat-accordion>
   </mat-card-content>
 </mat-card>

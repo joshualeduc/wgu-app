@@ -4,17 +4,15 @@ import { Option } from './option.model';
 @Component({
   selector: 'wgu-theme-switcher',
   templateUrl: './theme-switcher.component.html',
-  styleUrls: ['./theme-switcher.component.scss']
+  styleUrls: ['./theme-switcher.component.scss'],
 })
-
 export class ThemeSwitcherComponent {
   @Input() options!: Option[] | null;
   @Output() themeChange: EventEmitter<string> = new EventEmitter<string>();
 
-  constructor() { }
+  constructor() {}
 
   changeTheme(themeToSet: string) {
-    this.themeChange.emit(themeToSet)
+    this.themeChange.emit(themeToSet);
   }
-
 }

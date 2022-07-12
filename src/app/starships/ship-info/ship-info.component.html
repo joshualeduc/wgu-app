@@ -1,4 +1,9 @@
-<div fxLayout="row" fxLayoutAlign="center center" class="loading-container" *ngIf="showLoader">
+<div
+  fxLayout="row"
+  fxLayoutAlign="center center"
+  class="loading-container"
+  *ngIf="showLoader"
+>
   <mat-spinner></mat-spinner>
 </div>
 <mat-card *ngIf="!showLoader">
@@ -11,16 +16,17 @@
     </mat-card-title>
   </mat-card-header>
   <mat-card-subtitle>
-    {{shipName}}
+    {{ shipName }}
   </mat-card-subtitle>
   <mat-card-content>
     <mat-grid-list cols="4" rowHeight="100px" gutterSize="8px">
       <mat-grid-tile
-          *ngFor="let detail of shipInfo"
-          [colspan]="detail.cols"
-          [rowspan]="detail.rows"
-          class="mat-elevation-z4">
-        {{detail.label}} - {{detail.text}}
+        *ngFor="let detail of shipInfo"
+        [colspan]="detail.cols"
+        [rowspan]="detail.rows"
+        class="mat-elevation-z4"
+      >
+        {{ detail.label }} - {{ detail.text }}
       </mat-grid-tile>
     </mat-grid-list>
   </mat-card-content>

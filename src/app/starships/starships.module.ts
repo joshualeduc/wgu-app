@@ -11,19 +11,11 @@ import { ShipInfoComponent } from './ship-info/ship-info.component';
 const routes: Routes = [
   { path: 'list', component: ShipListComponent },
   { path: 'info/:id', component: ShipInfoComponent },
-  { path: '**', redirectTo: 'list', pathMatch: 'full'}
-]
+  { path: '**', redirectTo: 'list', pathMatch: 'full' },
+];
 
 @NgModule({
-  declarations: [
-    ShipListComponent,
-    ShipInfoComponent,
-    ConvertToSpacesPipe
-  ],
-  imports: [
-    CommonModule,
-    MaterialModule,
-    RouterModule.forChild(routes)
-  ]
+  declarations: [ShipListComponent, ShipInfoComponent, ConvertToSpacesPipe],
+  imports: [CommonModule, MaterialModule, RouterModule.forChild(routes)],
 })
-export class StarshipsModule { }
+export class StarshipsModule {}

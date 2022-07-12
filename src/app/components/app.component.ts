@@ -6,16 +6,18 @@ import { MatSidenav } from '@angular/material/sidenav';
   template: `
     <wgu-sidenav>
       <div fxLayout="row" fxLayoutAlign="center" class="main-container">
-          <router-outlet></router-outlet>
+        <router-outlet></router-outlet>
       </div>
     </wgu-sidenav>
   `,
-  styles: [`
-    .main-container {
-      margin-top: 25px;
-      height: calc(100% - 65px);
-    }
-  `]
+  styles: [
+    `
+      .main-container {
+        margin-top: 25px;
+        height: calc(100% - 65px);
+      }
+    `,
+  ],
 })
 export class AppComponent {
   title = 'wgu-app';

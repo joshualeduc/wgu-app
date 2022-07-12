@@ -1,8 +1,12 @@
 <mat-sidenav-container class="container">
-  <mat-sidenav #sidenav class="mat-elevation-z10" [opened]="!isScreenSmall"
-  [mode]="isScreenSmall ? 'over' : 'side'">
+  <mat-sidenav
+    #sidenav
+    class="mat-elevation-z10"
+    [opened]="!isScreenSmall"
+    [mode]="isScreenSmall ? 'over' : 'side'"
+  >
     <mat-toolbar color="primary">
-      <img mat-card src="/assets/Star_Wars_Logo.png" class="logo-img">
+      <img mat-card src="/assets/Star_Wars_Logo.png" class="logo-img" />
     </mat-toolbar>
     <mat-nav-list>
       <mat-list-item>

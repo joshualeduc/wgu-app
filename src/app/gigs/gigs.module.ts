@@ -7,18 +7,12 @@ import { MaterialModule } from '../shared/material.module';
 import { VendorsComponent } from './vendors/vendors.component';
 
 const routes: Routes = [
-  { path: 'vendors', component: VendorsComponent},
-  { path: '**', redirectTo: 'vendors', pathMatch: 'full'}
-]
+  { path: 'vendors', component: VendorsComponent },
+  { path: '**', redirectTo: 'vendors', pathMatch: 'full' },
+];
 
 @NgModule({
-  declarations: [
-    VendorsComponent
-  ],
-  imports: [
-    CommonModule,
-    MaterialModule,
-    RouterModule.forChild(routes)
-  ]
+  declarations: [VendorsComponent],
+  imports: [CommonModule, MaterialModule, RouterModule.forChild(routes)],
 })
-export class GigsModule { }
+export class GigsModule {}
